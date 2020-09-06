@@ -1,13 +1,14 @@
 /**
  *  app.js
  *
- *  Discord bot template.
+ *  Discord bot for the Girls Only server.
  */
 
 /*******************
  * Library Imports *
  *******************/
 
+require("dotenv").config();
 const colors = require("chalk");
 const Discord = require("discord.js");
 
@@ -18,10 +19,10 @@ const Discord = require("discord.js");
 // Config properties
 const CONFIG = {
     // Bot token
-    token: "",
+    token: process.env.DISCORD_BOT_TOKEN,
     // Channel IDs
     channels: {
-        general: "",
+        general: process.env.GIRLS_ONLY_BOT_TESTING,
     },
     // Activity shown when the bot appears 'online'
     defaultActivity: {
